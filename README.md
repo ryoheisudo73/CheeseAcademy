@@ -5,7 +5,7 @@ Cheese Academy アプリ
 - 仕様書通り＋ハロウィーンモード切替（ヘッダークリック時）
 
 ## ③アプリのデプロイURL
-デプロイしている場合はURLを記入（任意）
+https://ryoheisudo73.github.io/CheeseAcademy/
 
 ## ④アプリのログイン用IDまたはPassword（ある場合）
 - ID: なし
