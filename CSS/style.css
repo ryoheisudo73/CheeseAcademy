@@ -1,0 +1,437 @@
+/* ここから下に記載していく */
+.header {
+    display: flex;
+    align-items: center; /* 画像と文字の縦の中心を揃える　*/
+    justify-content: space-between; /* 画像を左端、文字グループを右端に配置する */
+    padding: 20px; /*　内側の余白　*/
+}
+
+.navi-list {
+    display: flex; /*文字同士も横並びにする */
+    gap: 30px; /* 文字と文字の間の間隔を指定する */
+    list-style: none; /* リストの点を消す */
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+}
+
+.mainbg {
+    background-image: url('../img/mainbg.png');
+    background-size:cover; /* 画像の比率を保ちながら要素全体を覆う */
+    background-position:center; /* 画像の中央を基準に表示する */
+    min-height: 500px; /* 背景画像を見せる高さ */
+    padding: 0px 0px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;  /* 文字を縦に並べる */
+    justify-content: center; /* 上下の中央に揃える */
+    align-items: center;     /* 左右の中央に揃える */
+    gap: 30px;               /* 文章と文章の間の間隔 */
+
+}
+.mainbg p:nth-child(1) {
+    font-size: 48px;
+}
+
+.mainbg p:nth-child(2) {
+    font-size: 32px;
+}
+
+.about {
+    text-align:center;
+}
+.about {
+    padding-bottom: 60px;
+}
+
+.about p {
+    font-size: 16px; /* その他 */
+}
+.about p:nth-child(1) { margin-top: 60px; color: #ffd61a; font-size: 24px; /* 英語 */ }
+.about p:nth-child(2) { margin-top: 30px; }
+.about p:nth-child(3) { margin-top: 60px; }
+.about p:nth-child(4) { margin-top: 30px; }
+.about p:nth-child(5) { margin-top: 5px; }
+.about p:nth-child(6) { margin-top: 40px; }
+.about p:nth-child(7) { margin-top: 5px; }
+.about p:nth-child(8) { margin-top: 40px; }
+
+.about img {
+    margin-top: 80px; /* 最終行と画像の間の余白 */
+    display: block;
+    width: 100%;      /* ページの横幅いっぱいに収める */
+    height: auto;
+}
+
+.course {
+    text-align:center;
+}
+
+.course {
+    padding-bottom: 60px;
+}
+
+.course p:nth-child(1) { margin-top: 0px; font-size: 24px; /* 英語 */ }
+.course p:nth-child(2) { margin-top: 30px; }
+.course p:nth-child(3) { margin-top: 5px; }
+
+.course_complicated {
+    display: flex;
+    align-items: stretch; /* 画像とテキストボックスの高さを揃える */
+}
+
+.course_complicated img,
+.course_complicated .course_text {
+    flex: 0 0 50%; /* 左右ちょうど半分ずつ */
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.course_complicated img {
+    height: auto;
+    display: block;
+    object-fit: cover; /* 高さが揃うよう画像をトリミングして埋める */
+}
+
+.course_complicated .course_text {
+    padding: 40px;
+    background-color: #fafafa; /* かなり薄いグレー */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 文字は上下中央 */
+    writing-mode: horizontal-tb; /* 横書き */
+    text-align: left;
+    line-height: 1.8;
+}
+
+.course_complicated .course_text p:nth-child(1) {
+    font-size: 18px; /* 日本語の見出し */
+    margin-bottom: 20px;
+}
+
+.course_complicated.reverse {
+    flex-direction: row-reverse; /* 左右を入れ替える */
+}
+
+.news_list {
+    display: flex;
+    gap: 30px; /* 記事と記事の間の間隔 */
+    justify-content: center; /* 3つまとめて中央に置く */
+}
+
+.news_item {
+    flex: 0 0 300px; /* 3つとも幅300px */
+    min-width: 0;
+}
+
+.news_item img {
+    width: 300px;
+    height: auto;
+    display: block;
+}
+
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.form_area {
+    padding: 0 20px 60px;
+}
+
+.contact_form {
+    margin: 30px auto 0;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 240px 400px; /* 項目部分240px、回答部分400px */
+    justify-content: center;
+    align-items: stretch;               /* 同じ行の左右の高さを揃える */
+}
+
+.form_item {
+    display: contents;       /* 項目名と入力欄を、フォーム全体の同じ2列に載せる */
+}
+
+.form_label {
+    box-sizing: border-box;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 16px 10px 5px;  /* 上は入力欄の1行目と高さを合わせる分 */
+    border-right: 1px solid #bfbfbf;  /* 左列と右列の間の罫線 */
+    border-bottom: 1px solid #bfbfbf; /* 行と行の間の罫線 */
+}
+
+.form_field {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 5px;            /* 入力欄と罫線の間 */
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.form_item:first-child > * {
+    border-top: 1px solid #bfbfbf; /* フォーム最上部の罫線 */
+}
+
+.form_field input[type="text"],
+.form_field input[type="email"],
+.form_field select,
+.form_field textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.form_field label {
+    display: block;
+    line-height: 1.5;
+}
+
+.form_field label:first-child {
+    margin-top: 11px;        /* 項目名の文字と高さを合わせる */
+}
+
+.form_field label + label {
+    margin-top: 24px;        /* 志望動機の各選択肢の間 */
+}
+
+.form_submit {
+    margin-top: 24px;
+    grid-column: 1 / -1;     /* 2列をまたいで中央に置く */
+    justify-self: center;
+    padding: 12px 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.copy_rights {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.news {
+    padding-top: 60px;    /* 「NEWS」の上 */
+    padding-bottom: 60px; /* 説明と「More」の間 */
+}
+
+.news > p:nth-child(2) { margin-top: 30px; } /* 「NEWS」と「ニュース」の間 */
+
+.news_list {
+    margin-top: 60px;     /* 「ニュース」と画像の間 */
+}
+
+.news_item p:nth-of-type(1) { margin-top: 30px; } /* 画像と日付の間 */
+.news_item p:nth-of-type(2) { margin-top: 24px; } /* 日付と説明の間 */
+
+.more {
+    padding-bottom: 60px; /* 「More」の下 */
+}
+
+.access {
+    background-color: #fafafa; /* かなり薄いグレー（COURSEのテキストボックスと同じ） */
+}
+
+.access {
+    text-align: center;
+    padding-top: 60px;    /* 「Access」の上 */
+    padding-bottom: 60px; /* 一番下 */
+}
+
+.access iframe { display: block; margin: 60px auto 0; max-width: 100%; } /* 「会社情報」とiframeの間 */
+
+.access p:nth-child(2) { margin-top: 30px; } /* 「Access」と「会社情報」の間 */
+.access_info {
+    display: grid;
+    grid-template-columns: max-content max-content; /* 項目名の列と内容の列 */
+    column-gap: 20px;
+    row-gap: 30px;                                  /* 各行の間は30px */
+    justify-content: center;                        /* 2列まとめて中央に置く */
+    margin-top: 60px;                               /* iframeと「学校名」の間 */
+    text-align: left;                               /* 各列の先頭の文字をそろえる */
+}
+
+.access_info p {
+    display: contents;       /* 項目名と内容を、同じ2列に載せる */
+}
+
+/* 見出し：NEWSはABOUT、ACCESSとCONTACTはCOURSEと同じ */
+.news > p:nth-child(1) { font-size: 24px; color: #ffd61a; }
+.access > p:nth-child(1),
+.contact > p:nth-child(1) { font-size: 24px; }
+
+.news > p { text-align: center; } /* 「NEWS」「ニュース」を中央寄せ */
+
+/* フォントサイズ統一：英語見出し24px／日本語見出し18px／その他16px */
+.about p:nth-child(2),
+.news > p:nth-child(2),
+.access > p:nth-child(2),
+.contact > p:nth-child(2) {
+    font-size: 18px;
+}
+
+/* 送信ボタンとMORE：黄色の塗りつぶし・白文字 */
+.form_submit,
+.more p {
+    background-color: #ffd61a;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-size: 16px;
+}
+
+.more {
+    display: flex;
+    justify-content: center; /* MOREを中央に置く */
+}
+
+/* CONTACT の余白 */
+.contact {
+    padding-top: 60px;    /* 「CONTACT」の上 */
+    padding-bottom: 70px; /* 一番下 */
+}
+.contact > p:nth-child(2) { margin-top: 30px; } /* CONTACT → 説明会お申し込み */
+.contact > p:nth-child(3) { margin-top: 60px; } /* 説明会お申し込み → ぜひ1度 */
+.contact > p:nth-child(4) { margin-top: 5px; }  /* ぜひ1度 → その他 */
+.contact > p:nth-child(5) { margin-top: 30px; } /* その他 → ※チーズアカデミーは */
+.contact > p:nth-child(6) { margin-top: 5px; }  /* ※ → 間違っても */
+.contact > p:nth-child(7) { margin-top: 5px; }  /* 間違っても → FAX */
+.contact > p:nth-child(8) { margin-top: 5px; }  /* FAX → MAIL */
+
+body {
+    max-width: 1200px; /* ページ全体の横幅 */
+    margin: 0 auto;    /* 画面の中央に置く */
+}
+
+html {
+    scroll-behavior: smooth; /* クリックしたときになめらかに移動する */
+}
+
+.navi-list a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.more p {
+    box-sizing: border-box;
+    width: 300px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 文字を左右中央に */
+    align-items: center;     /* 文字を上下中央に */
+}
+
+.more p {
+    transition: opacity 0.3s; /* なめらかに変化させる */
+    cursor: pointer;
+}
+
+.more p:hover {
+    opacity: 0.7; /* 少し透けさせる */
+}
+
+.form_submit {
+    transition: opacity 0.3s;
+}
+
+.form_submit:hover {
+    opacity: 0.7; /* 少し透けさせる */
+}
+
+.form_submit {
+    box-sizing: border-box;
+    width: 300px;
+    height: 60px;
+    padding: 0;
+}
+
+.news_item {
+    transition: opacity 0.3s;
+}
+
+.news_item:hover {
+    opacity: 0.7; /* 少し透けさせる */
+}
+
+/* 左にテキスト・右に画像のエリア：一番右の文字と画像の間を50pxにする */
+.course_complicated.reverse .course_text {
+    align-items: flex-end;  /* 文字のまとまりを右端に寄せる */
+    padding-right: 50px;    /* 右端の文字と画像の間 */
+}
+
+/* ロゴのホバー */
+.logo {
+    width: 381px;  /* 元画像と同じ大きさ。ハロウィーン版(4420px幅)に切り替わっても変わらない */
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.logo:hover {
+    opacity: 0.7; /* 少し透けさせる */
+}
+
+/* ハロウィーン調（ロゴをクリックで body に halloween クラスが付く） */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.halloween {
+    background-color: #1a1a1a;
+    color: #ff9d3c;
+}
+
+body.halloween .mainbg {
+    background-image: url('../img/mainbg_halloween.jpg');
+}
+
+body.halloween .about p:nth-child(1),
+body.halloween .news > p:nth-child(1) {
+    color: #ff7518; /* 黄色の見出しをオレンジに */
+}
+
+body.halloween .course_complicated .course_text,
+body.halloween .access {
+    background-color: #2b2b2b;
+}
+
+body.halloween .copy_rights {
+    background-color: #000;
+    color: #ff7518;
+}
+
+body.halloween .form_label,
+body.halloween .form_field {
+    border-color: #6b4a2b;
+}
+
+body.halloween .form_field input[type="text"],
+body.halloween .form_field input[type="email"],
+body.halloween .form_field select,
+body.halloween .form_field textarea {
+    background-color: #2b2b2b;
+    color: #ff9d3c;
+    border-color: #ff7518;
+}
+
+body.halloween .form_submit,
+body.halloween .more p {
+    background-color: #ff7518;
+    color: #1a1a1a;
+}
+
+body.halloween .mainbg p:nth-child(1) {
+    color: #ff7518; /* かぼちゃのオレンジ */
+    text-shadow: 0 0 8px #000, 0 0 16px #000, 2px 2px 0 #000;
+}
+
+body.halloween .mainbg p:nth-child(2) {
+    color: #c58bff; /* 魔女の紫 */
+    text-shadow: 0 0 8px #000, 0 0 16px #000, 2px 2px 0 #000;
+}
